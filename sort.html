@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertion Sort</title>
+	<script type="text/javascript">
+		var num = new Array();
+		var size = 10;
+
+	for (var i=0; i < size; i++) { 
+		var rand = Math.floor(Math.random()*1000 + 1);
+	 	num.push(rand);
+	 }
+
+	console.log(num);
+
+	for (var i=1; i < size; i++) {
+
+		for (var j= i; j > 0; j--) { 
+			if(num[j] < num[j-1]) {
+				temp = num[j];
+				num[j] = num[j-1];
+				num[j-1] = temp;
+			}
+		}
+	}
+
+	console.log(num);
+
+	// 0.639 s for 1000 elements
+	
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
